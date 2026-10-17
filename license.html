@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" data-accent="tide" data-density="default" data-shell="landing" data-title-key="lp.site.license.title">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>License · Orcanix</title>
+<meta name="description" content="Orcanix Standard and Extended licenses: what you may build, what you may not, and how many end products each covers.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0d1012">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://oriebalzyuot96.github.io/orcanix-site/license.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Orcanix">
+<meta property="og:title" content="License · Orcanix">
+<meta property="og:description" content="Orcanix Standard and Extended licenses: what you may build, what you may not, and how many end products each covers.">
+<meta property="og:url" content="https://oriebalzyuot96.github.io/orcanix-site/license.html">
+<meta property="og:image" content="https://oriebalzyuot96.github.io/orcanix-site/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+  /* Orcanix: apply saved settings before first paint (customizer contract, ARCHITECTURE.md 4a): no flash of the
+     wrong theme, accent, skin, contrast scheme, text size, motion or direction. Mirrors ts/core/settings.ts. */
+  (function () {
+    var d = document.documentElement, s = {}, ok = /^[a-z0-9.-]{1,16}$/, K = 'orcanix:settings';
+    try { s = JSON.parse(localStorage.getItem(K) || '{}') || {}; } catch (e) { s = {}; }
+    try {
+      var q = new URLSearchParams(location.search), changed = false,
+        keys = { mode: 'mode', accent: 'accent', layout: 'layout', density: 'density', dir: 'dir', lang: 'lang', numerals: 'numerals', skin: 'skin', contrast: 'a11yContrast', font: 'fontScale', motion: 'motion', sound: 'sound', loader: 'pageLoader' };
+      for (var k in keys) { var v = q.get(k); if (v && ok.test(v)) { s[keys[k]] = k === 'font' ? Number(v) : v; changed = true; } }
+      if (s.motion === undefined) { var lm = localStorage.getItem('orcanix:motion'); if (lm === 'on' || lm === 'off') s.motion = lm; }
+      if (changed) localStorage.setItem(K, JSON.stringify(s));
+    } catch (e) {}
+    var pick = function (v, list, def) { return list.indexOf(v) >= 0 ? v : def; };
+    var mm = function (m) { return window.matchMedia && matchMedia(m).matches; };
+    var mode = pick(s.mode, ['light', 'dark', 'hc', 'system'], 'light');
+    if (mode === 'system') mode = mm('(prefers-color-scheme: dark)') ? 'dark' : 'light';
+    var lang = s.lang === 'ar' ? 'ar' : 'en', motion = pick(s.motion, ['on', 'off', 'auto'], 'auto');
+    var accent = pick(s.accent, ['tide', 'glacier', 'krill', 'kelp', 'aurora', 'sonar', 'custom'], 'tide');
+    d.setAttribute('data-theme', mode);
+    d.setAttribute('data-accent', accent);
+    d.setAttribute('data-skin', pick(s.skin, ['default', 'glass', 'soft', 'sharp', 'neo'], 'default'));
+    d.setAttribute('data-density', pick(s.density, ['compact', 'default', 'comfortable'], 'default'));
+    if (!d.hasAttribute('data-shell')) d.setAttribute('data-layout', pick(s.layout, ['vertical', 'mini', 'horizontal', 'two-column', 'boxed'], 'vertical'));
+    d.setAttribute('data-a11y-contrast', pick(s.a11yContrast, ['none', 'yellow-black', 'black-yellow', 'gray'], 'none'));
+    d.setAttribute('data-font-scale', String(pick(Number(s.fontScale), [0.875, 1, 1.125, 1.25, 1.5], 1)));
+    d.setAttribute('data-motion', motion === 'auto' ? (mm('(prefers-reduced-motion: reduce)') ? 'off' : 'on') : motion);
+    d.setAttribute('data-sound', s.sound === 'on' ? 'on' : 'off');
+    d.setAttribute('data-page-loader', ok.test(s.pageLoader || '') ? s.pageLoader : 'sonar');
+    d.lang = lang;
+    d.dir = s.dir === 'rtl' || s.dir === 'ltr' ? s.dir : lang === 'ar' ? 'rtl' : 'ltr';
+    if (accent === 'custom') {
+      try {
+        var c = JSON.parse(localStorage.getItem('orcanix:accent-custom') || 'null');
+        if (c && c.hex === s.accentCustom && /^[-a-z0-9:#;]+$/.test(c.style)) d.setAttribute('style', c.style);
+      } catch (e) {}
+    }
+  })();
+</script>
+
+<script>document.documentElement.classList.add('ox-lp-js');</script>
+
+  <script type="module" crossorigin src="./assets/site-CJ0x7xMh.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/site-DyJL6J6m.css">
+</head>
+<body class="ox-lp ox-site">
+<div class="ox-page-loader" data-ox-page-loader hidden><div class="ox-loader ox-loader--lg ox-loader--sonar" role="status"><span class="ox-loader__art" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="ox-sr-only" data-i18n="lp.c.loading">Loading page…</span></div></div>
+<script>
+  /* Page loader (customizer: pageLoader). Appears only if the page takes longer than 300ms, leaves on load (2.5s max). */
+  (function () {
+    var el = document.currentScript.previousElementSibling, n = document.documentElement.getAttribute('data-page-loader');
+    if (!n || n === 'none' || !/^[a-z]+$/.test(n)) { el.remove(); return; }
+    el.firstElementChild.className = 'ox-loader ox-loader--lg ox-loader--' + n;
+    var done = false, show = setTimeout(function () { if (!done) el.hidden = false; }, 300);
+    var hide = function () {
+      if (done) return; done = true; clearTimeout(show);
+      if (el.hidden) { el.remove(); return; }
+      el.setAttribute('data-leaving', ''); setTimeout(function () { el.remove(); }, 260);
+    };
+    addEventListener('load', hide); setTimeout(hide, 2500);
+  })();
+</script>
+
+<a class="ox-skip-link" href="#main" data-i18n="lp.c.skip">Skip to content</a>
+<header class="ox-lp-header ox-site-header">
+  <div class="ox-lp-wrap ox-lp-header__inner">
+    <a class="ox-lp-logo" href="./index.html">
+      <svg class="ox-brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="ox-mark__bg" width="32" height="32" rx="9"/><path class="ox-mark__fin" d="M7.5 22.2c4.9-2.3 9-7.6 11.3-17 .4 7.4 2.3 12.6 5.7 17z"/><path class="ox-mark__wave" d="M5.5 25.6c1.8-1.2 3.6-1.2 5.4 0s3.6 1.2 5.4 0 3.6-1.2 5.4 0 3.6 1.2 5.4 0"/></svg>
+
+      <span>Orcanix</span>
+    </a>
+    <nav class="ox-lp-nav" id="site-nav" aria-label="Primary" data-i18n-attr="aria-label:lp.c.primaryNav">
+      <ul>
+        <li><a href="./index.html#demo" data-i18n="lp.site.nav.demo">What's inside</a></li>
+        <li><a href="./index.html#features" data-i18n="lp.site.nav.features">Features</a></li>
+        <li><a href="./index.html#editions" data-i18n="lp.site.nav.editions">Editions</a></li>
+        <li><a href="./index.html#pricing" data-i18n="lp.site.nav.pricing">Pricing</a></li>
+        <li><a href="./index.html#faq" data-i18n="lp.c.faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="ox-lp-header__end">
+      <div class="ox-lp-controls">
+        <button class="ox-btn ox-btn--ghost ox-btn--icon ox-lp-motion" type="button" data-action="motion-toggle" aria-pressed="true">
+          <svg class="ox-icon ox-lp-motion__pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6.5" y="5" width="3.5" height="14" rx="1" fill="currentColor"/><rect x="14" y="5" width="3.5" height="14" rx="1" fill="currentColor"/></svg>
+          <svg class="ox-icon ox-lp-motion__play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill="currentColor"/></svg>
+          <span class="ox-sr-only" data-i18n="lp.c.motion">Animations</span>
+        </button>
+        <button class="ox-btn ox-btn--ghost ox-btn--sm ox-lp-lang" type="button" data-action="lang-toggle">
+          <svg class="ox-icon" aria-hidden="true" focusable="false"><use href="./icons/sprite.svg#i-languages"></use></svg><span data-lang-label lang="ar">العربية</span>
+        </button>
+        <div class="ox-dropdown" data-ox-menu>
+  <button class="ox-btn ox-btn--ghost ox-btn--icon" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-theme" data-menu-trigger>
+    <svg class="ox-icon ox-theme-icon ox-theme-icon--light" aria-hidden="true" focusable="false"><use href="./icons/sprite.svg#i-sun"></use></svg>
+    <svg class="ox-icon ox-theme-icon ox-theme-icon--dark" aria-hidden="true" focusable="false"><use href="./icons/sprite.svg#i-moon"></use></svg>
+    <svg class="ox-icon ox-theme-icon ox-theme-icon--hc" aria-hidden="true" focusable="false"><use href="./icons/sprite.svg#i-contrast"></use></svg>
+    <span class="ox-sr-only" data-i18n="header.theme">Theme</span>
+  </button>
+  <div class="ox-menu" id="menu-theme" role="menu" aria-label="Theme" data-i18n-attr="aria-label:header.theme" hidden>
+    <button class="ox-menu__item" type="button" role="menuitemradio" aria-checked="false" data-set-mode="light"><svg class="ox-icon" aria-hidden="true" focusable="false"><use href="./icons/sprite.svg#i-sun"></use></svg><span data-i18n="theme.light">Light</span></button>
+    <button class="ox-menu__item" type="button" role="menuitemradio" aria-checked="false" data-set-mode="dark"><svg class="ox-icon" aria-hidden="true" focusable="false"><use href="./icons/sprite.svg#i-moon"></use></svg><span data-i18n="theme.dark">Dark</span></button>
+    <button class="ox-menu__item" type="button" role="menuitemradio" aria-checked="false" data-set-mode="hc"><svg class="ox-icon" aria-hidden="true" focusable="false"><use href="./icons/sprite.svg#i-contrast"></use></svg><span data-i18n="theme.hc">High contrast</span></button>
+    <button class="ox-menu__item" type="button" role="menuitemradio" aria-checked="false" data-set-mode="system"><svg class="ox-icon" aria-hidden="true" focusable="false"><use href="./icons/sprite.svg#i-monitor"></use></svg><span data-i18n="theme.system">System</span></button>
+  </div>
+</div>
+
+        <div class="ox-dropdown" data-ox-popover>
+  <button class="ox-btn ox-btn--ghost ox-btn--icon" type="button" aria-expanded="false" aria-controls="site-appearance" data-popover-trigger>
+    <svg class="ox-icon" aria-hidden="true" focusable="false"><use href="./icons/sprite.svg#i-sliders-horizontal"></use></svg><span class="ox-sr-only" data-i18n="lp.site.appearance">Appearance and accessibility</span>
+  </button>
+  <div class="ox-popover ox-popover--a11y ox-site-appearance" id="site-appearance" hidden>
+    <div class="ox-popover__head">
+      <h2 class="ox-popover__title" data-i18n="lp.site.appearance">Appearance and accessibility</h2>
+    </div>
+    <div class="ox-a11y-panel">
+      <fieldset class="ox-fieldset">
+        <legend data-i18n="cz.accent">Accent</legend>
+        <div class="ox-choices" style="--cols: 3">
+          <label class="ox-choice"><input type="radio" name="site-accent" value="tide" data-setting="accent"><span class="ox-choice__body"><span class="ox-choice__swatch" data-swatch="tide"></span><span data-i18n="accent.tide">Tide</span></span></label>
+          <label class="ox-choice"><input type="radio" name="site-accent" value="glacier" data-setting="accent"><span class="ox-choice__body"><span class="ox-choice__swatch" data-swatch="glacier"></span><span data-i18n="accent.glacier">Glacier</span></span></label>
+          <label class="ox-choice"><input type="radio" name="site-accent" value="krill" data-setting="accent"><span class="ox-choice__body"><span class="ox-choice__swatch" data-swatch="krill"></span><span data-i18n="accent.krill">Krill</span></span></label>
+          <label class="ox-choice"><input type="radio" name="site-accent" value="kelp" data-setting="accent"><span class="ox-choice__body"><span class="ox-choice__swatch" data-swatch="kelp"></span><span data-i18n="accent.kelp">Kelp</span></span></label>
+          <label class="ox-choice"><input type="radio" name="site-accent" value="aurora" data-setting="accent"><span class="ox-choice__body"><span class="ox-choice__swatch" data-swatch="aurora"></span><span data-i18n="accent.aurora">Aurora</span></span></label>
+          <label class="ox-choice"><input type="radio" name="site-accent" value="sonar" data-setting="accent"><span class="ox-choice__body"><span class="ox-choice__swatch" data-swatch="sonar"></span><span data-i18n="accent.sonar">Sonar</span></span></label>
+          <label class="ox-choice ox-choice--wide"><input type="radio" name="site-accent" value="custom" data-setting="accent"><span class="ox-choice__body"><span class="ox-choice__swatch ox-choice__swatch--custom" data-custom-swatch></span><span data-i18n="accent.custom">Custom</span></span></label>
+        </div>
+        <div class="ox-accent-custom" data-accent-custom hidden>
+          <p class="ox-label ox-flush" data-i18n="cp.customTitle">Custom accent</p>
+          <div class="ox-cp" data-ox-colorpicker>
+            <div class="ox-cp__sv" role="slider" tabindex="0" aria-label="Saturation and brightness" data-i18n-attr="aria-label:cp.sv" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="Saturation 50%, brightness 50%" data-cp-sv><span class="ox-cp__thumb" data-cp-thumb></span></div>
+            <label class="ox-sr-only" for="site-cp-hue" data-i18n="cp.hue">Hue</label>
+            <input class="ox-cp__hue" id="site-cp-hue" type="range" min="0" max="359" step="1" value="190" data-cp-hue>
+            <div class="ox-cp__row">
+              <span class="ox-cp__preview" data-cp-preview></span>
+              <div class="ox-field">
+                <label class="ox-label" for="site-cp-hex" data-i18n="cp.hex">Hex color</label>
+                <input class="ox-input ox-mono" id="site-cp-hex" type="text" dir="ltr" maxlength="7" spellcheck="false" autocomplete="off" aria-describedby="site-cp-hex-error" data-cp-hex>
+              </div>
+              <button class="ox-btn ox-btn--icon" type="button" data-cp-eyedropper hidden><svg class="ox-icon" aria-hidden="true" focusable="false"><use href="./icons/sprite.svg#i-pipette"></use></svg><span class="ox-sr-only" data-i18n="cp.eyedropper">Pick a color from the screen</span></button>
+            </div>
+            <p class="ox-error" id="site-cp-hex-error"></p>
+            <p class="ox-label ox-flush" id="site-cp-presets" data-i18n="cp.presets">Suggested colors</p>
+            <ul class="ox-cp__swatches" aria-labelledby="site-cp-presets" data-cp-swatches></ul>
+            <p class="ox-label ox-flush" id="site-cp-report" data-i18n="cp.contrast">Contrast of text on the accent</p>
+            <ul class="ox-cp__report" aria-labelledby="site-cp-report" data-cp-report></ul>
+            <p class="ox-help ox-flush" data-cp-note></p>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="ox-fieldset" aria-describedby="site-skin-help">
+        <legend data-i18n="cz.skin">Skin</legend>
+        <div class="ox-choices" style="--cols: 3">
+          <label class="ox-choice"><input type="radio" name="site-skin" value="default" data-setting="skin"><span class="ox-choice__body"><span class="ox-skin-thumb ox-skin-thumb--default" aria-hidden="true"></span><span data-i18n="skin.default">Classic</span></span></label>
+          <label class="ox-choice"><input type="radio" name="site-skin" value="glass" data-setting="skin"><span class="ox-choice__body"><span class="ox-skin-thumb ox-skin-thumb--glass" aria-hidden="true"></span><span data-i18n="skin.glass">Glass</span></span></label>
+          <label class="ox-choice"><input type="radio" name="site-skin" value="soft" data-setting="skin"><span class="ox-choice__body"><span class="ox-skin-thumb ox-skin-thumb--soft" aria-hidden="true"></span><span data-i18n="skin.soft">Soft</span></span></label>
+          <label class="ox-choice"><input type="radio" name="site-skin" value="sharp" data-setting="skin"><span class="ox-choice__body"><span class="ox-skin-thumb ox-skin-thumb--sharp" aria-hidden="true"></span><span data-i18n="skin.sharp">Sharp</span></span></label>
+          <label class="ox-choice"><input type="radio" name="site-skin" value="neo" data-setting="skin"><span class="ox-choice__body"><span class="ox-skin-thumb ox-skin-thumb--neo" aria-hidden="true"></span><span data-i18n="skin.neo">Neo</span></span></label>
+        </div>
+        <p class="ox-help" id="site-skin-help" data-i18n="cz.skinHelp">Changes shape and material: corners, borders, shadows, depth and navigation.</p>
+      </fieldset>
+      <div class="ox-field">
+        <label class="ox-label" for="site-loader" data-i18n="cz.loader">Page loader</label>
+        <select class="ox-select" id="site-loader" data-setting="pageLoader" aria-describedby="site-loader-help">
+          <option value="sonar" data-i18n="loader.sonar">Sonar</option>
+          <option value="none" data-i18n="loader.none">None</option>
+          <option value="spinner" data-i18n="loader.spinner">Spinner</option>
+          <option value="orbit" data-i18n="loader.orbit">Orbit</option>
+          <option value="pulse" data-i18n="loader.pulse">Pulse</option>
+          <option value="bars" data-i18n="loader.bars">Bars</option>
+          <option value="wave" data-i18n="loader.wave">Wave</option>
+          <option value="ring" data-i18n="loader.ring">Rings</option>
+          <option value="dots" data-i18n="loader.dots">Dots</option>
+          <option value="morph" data-i18n="loader.morph">Morph</option>
+          <option value="typing" data-i18n="loader.typing">Typing</option>
+          <option value="shimmer" data-i18n="loader.shimmer">Shimmer</option>
+          <option value="fin" data-i18n="loader.fin">Fin</option>
+          <option value="progress" data-i18n="loader.progress">Progress line</option>
+          <option value="flip" data-i18n="loader.flip">Flip</option>
+        </select>
+        <p class="ox-help" id="site-loader-help" data-i18n="cz.loaderHelp">Shown when a page takes longer than 300 ms to load.</p>
+      </div>
+      <section class="ox-cz-section" aria-labelledby="site-a11y-title">
+        <h3 class="ox-cz-section__title" id="site-a11y-title" data-i18n="cz.a11y">Accessibility</h3>
+        <fieldset class="ox-fieldset">
+  <legend data-i18n="a11y.contrast">Contrast scheme</legend>
+  <div class="ox-choices ox-schemes">
+    <label class="ox-choice"><input type="radio" name="site-contrast" value="none" data-setting="a11yContrast"><span class="ox-choice__body ox-scheme__body"><span class="ox-scheme__sample ox-scheme__sample--none" aria-hidden="true">Aa</span><span data-i18n="a11y.none">Standard</span></span></label>
+    <label class="ox-choice"><input type="radio" name="site-contrast" value="yellow-black" data-setting="a11yContrast"><span class="ox-choice__body ox-scheme__body"><span class="ox-scheme__sample ox-scheme__sample--yellow-black" aria-hidden="true">Aa</span><span data-i18n="a11y.yellowBlack">Yellow on black</span></span></label>
+    <label class="ox-choice"><input type="radio" name="site-contrast" value="black-yellow" data-setting="a11yContrast"><span class="ox-choice__body ox-scheme__body"><span class="ox-scheme__sample ox-scheme__sample--black-yellow" aria-hidden="true">Aa</span><span data-i18n="a11y.blackYellow">Black on yellow</span></span></label>
+    <label class="ox-choice"><input type="radio" name="site-contrast" value="gray" data-setting="a11yContrast"><span class="ox-choice__body ox-scheme__body"><span class="ox-scheme__sample ox-scheme__sample--gray" aria-hidden="true">Aa</span><span data-i18n="a11y.gray">Grayscale</span></span></label>
+  </div>
+</fieldset>
+<div class="ox-field">
+  <p class="ox-label ox-flush" id="site-ts-label" data-i18n="a11y.textSize">Text size</p>
+  <div class="ox-textsize" role="group" aria-labelledby="site-ts-label">
+    <button class="ox-btn ox-btn--sm" type="button" data-font-step="-1"><span aria-hidden="true">A−</span><span class="ox-sr-only" data-i18n="a11y.smaller">Smaller text</span></button>
+    <output class="ox-textsize__value" data-font-value>100%</output>
+    <button class="ox-btn ox-btn--sm" type="button" data-font-step="1"><span aria-hidden="true">A+</span><span class="ox-sr-only" data-i18n="a11y.larger">Larger text</span></button>
+    <button class="ox-btn ox-btn--ghost ox-btn--sm" type="button" data-font-step="0" data-i18n="a11y.resetSize">Reset</button>
+  </div>
+</div>
+<fieldset class="ox-fieldset" aria-describedby="site-motion-help">
+  <legend data-i18n="a11y.motion">Animations</legend>
+  <div class="ox-choices" style="--cols: 3">
+    <label class="ox-choice"><input type="radio" name="site-motion" value="auto" data-setting="motion"><span class="ox-choice__body"><span data-i18n="motion.auto">System</span></span></label>
+    <label class="ox-choice"><input type="radio" name="site-motion" value="on" data-setting="motion"><span class="ox-choice__body"><span data-i18n="motion.on">On</span></span></label>
+    <label class="ox-choice"><input type="radio" name="site-motion" value="off" data-setting="motion"><span class="ox-choice__body"><span data-i18n="motion.off">Off</span></span></label>
+  </div>
+  <p class="ox-help" id="site-motion-help" data-i18n="a11y.motionHelp">Off stops transitions, loaders and 3D scenes. System follows your device's reduced-motion setting.</p>
+</fieldset>
+<div class="ox-cz-switch">
+  <span class="ox-cz-switch__text"><label for="site-snd" data-i18n="a11y.sound">Interface sounds</label><small id="site-snd-help" data-i18n="a11y.soundHelp">Short sounds for clicks, dialogs and alerts, always alongside a visible change.</small></span>
+  <span class="ox-switch"><input type="checkbox" role="switch" id="site-snd" data-setting="sound" aria-describedby="site-snd-help"></span>
+</div>
+
+      </section>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <a class="ox-btn ox-btn--primary ox-lp-header__cta" href="./index.html#pricing" data-ox-buy="standard"><span data-i18n="lp.site.buyShort">Buy for $10</span></a>
+      <button class="ox-btn ox-btn--ghost ox-btn--icon ox-lp-navtoggle" type="button" aria-expanded="false" aria-controls="site-nav" data-ox-lp-navtoggle>
+        <svg class="ox-icon" aria-hidden="true" focusable="false"><use href="./icons/sprite.svg#i-menu"></use></svg><span class="ox-sr-only" data-i18n="lp.c.menu">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="ox-lp-section">
+    <div class="ox-lp-wrap">
+      <article class="ox-site-legal">
+        <h1 class="ox-lp-h2" data-i18n="lp.site.license.title">License</h1>
+        <p class="ox-site-legal__date" data-i18n="lp.site.updated">Last updated: October 16, 2026</p>
+        <p data-i18n="lp.site.license.1">Orcanix is sold directly by Orieb Alzyout (the &quot;Author&quot;). When you buy a license you receive a non-exclusive, worldwide, perpetual right to use Orcanix under the terms below. Lemon Squeezy processes the payment as merchant of record; the license itself is granted by the Author.</p>
+        <h2 data-i18n="lp.site.license.2">Standard license</h2>
+        <p data-i18n="lp.site.license.3">You may use Orcanix, in any of its editions, to build one end product for yourself or for one client. End users of that product must not be charged for access to it. You may modify the code and combine it with your own work.</p>
+        <h2 data-i18n="lp.site.license.4">Extended license</h2>
+        <p data-i18n="lp.site.license.5">Everything the Standard license allows, plus the right to use Orcanix in one end product whose end users are charged, such as a paid software-as-a-service application.</p>
+        <h2 data-i18n="lp.site.license.6">What no license allows</h2>
+        <p data-i18n="lp.site.license.7">You may not resell, sublicense, share or redistribute Orcanix or its source files on their own or as part of a template, theme, UI kit or starter that competes with it, even if modified. You may not claim the design or code as your own work in a marketplace.</p>
+        <h2 data-i18n="lp.site.license.8">Multiple products and teams</h2>
+        <p data-i18n="lp.site.license.9">Each license covers one end product. For more products, buy one license per product. Everyone working on that product, including contractors, may use the files.</p>
+        <h2 data-i18n="lp.site.license.10">Third-party components</h2>
+        <p data-i18n="lp.site.license.11">Fonts, icons, Nawa Captcha and other open-source parts keep their own licenses (SIL OFL, ISC, MIT). Their notices are in the licenses folder of the download and must be kept.</p>
+        <h2 data-i18n="lp.site.license.12">No warranty</h2>
+        <p data-i18n="lp.site.license.13">Orcanix is provided &quot;as is&quot;, without warranty of any kind. To the extent permitted by law, the Author is not liable for damages arising from its use. The Author may end a license that is used in breach of these terms.</p>
+      </article>
+    </div>
+  </section>
+</main>
+<footer class="ox-lp-footer">
+  <div class="ox-lp-wrap">
+    <div class="ox-lp-footer__grid">
+      <div class="ox-lp-footer__about">
+        <a class="ox-lp-logo" href="./index.html"><svg class="ox-brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="ox-mark__bg" width="32" height="32" rx="9"/><path class="ox-mark__fin" d="M7.5 22.2c4.9-2.3 9-7.6 11.3-17 .4 7.4 2.3 12.6 5.7 17z"/><path class="ox-mark__wave" d="M5.5 25.6c1.8-1.2 3.6-1.2 5.4 0s3.6 1.2 5.4 0 3.6-1.2 5.4 0 3.6 1.2 5.4 0"/></svg>
+<span>Orcanix</span></a>
+        <p data-i18n="lp.site.footAbout">An accessible, Arabic-first admin and SaaS template in six framework editions. Sold directly by its author.</p>
+      </div>
+      <nav aria-labelledby="site-f1"><h2 id="site-f1" data-i18n="lp.c.product">Product</h2><ul><li><a href="./index.html#demo" data-i18n="lp.site.nav.demo">What's inside</a></li><li><a href="./index.html#features" data-i18n="lp.site.nav.features">Features</a></li><li><a href="./index.html#pricing" data-i18n="lp.site.nav.pricing">Pricing</a></li><li><a href="./index.html#changelog" data-i18n="lp.site.nav.changelog">Changelog</a></li></ul></nav>
+      <nav aria-labelledby="site-f2"><h2 id="site-f2" data-i18n="lp.site.legal">Legal</h2><ul><li><a href="./license.html" data-i18n="lp.site.nav.license">License</a></li><li><a href="./terms.html" data-i18n="lp.site.nav.terms">Terms of service</a></li><li><a href="./refund.html" data-i18n="lp.site.nav.refund">Refund policy</a></li><li><a href="./privacy.html" data-i18n="lp.site.nav.privacy">Privacy policy</a></li></ul></nav>
+      <nav aria-labelledby="site-f3"><h2 id="site-f3" data-i18n="lp.site.help">Help</h2><ul><li><a href="./contact.html" data-i18n="lp.site.nav.contact">Contact and support</a></li></ul></nav>
+    </div>
+    <div class="ox-lp-footer__base"><span>© 2026 Orcanix</span><span data-i18n="lp.c.rights">Built and tested to WCAG 2.2 AA.</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

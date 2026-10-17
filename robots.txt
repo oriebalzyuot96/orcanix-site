@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oriebalzyuot96.github.io/orcanix-site/sitemap.xml
